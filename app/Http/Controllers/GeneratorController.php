@@ -1,9 +1,8 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Http\Requests\StoreGeneratorPostRequest as StoreGeneratorPostRequest;
 use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
 
 class GeneratorController extends Controller {
 
@@ -32,9 +31,10 @@ class GeneratorController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Request $request)
+	public function store(StoreGeneratorPostRequest $request)
 	{
-		return $request->all();
+		return 'tes';
+		// return $request->all();
 	}
 
 	/**
