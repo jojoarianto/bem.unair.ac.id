@@ -32,9 +32,9 @@ class GeneratorController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		return $request->all();
 	}
 
 	/**
