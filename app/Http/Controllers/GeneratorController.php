@@ -33,8 +33,8 @@ class GeneratorController extends Controller {
 	 */
 	public function store(StoreGeneratorPostRequest $request)
 	{
-		return 'tes';
-		// return $request->all();
+		// return 'tes';
+		return $request->all();
 	}
 
 	/**

@@ -4,7 +4,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col s12 m6 push-m3 center" style="margin-top:9%">
+		<div class="col s12 m6 push-m3 center" style="margin-top:8%">
 			<div>
 				<h2 class="flow-text">BEM UNAIR Generator Link</h2>
 			</div>
