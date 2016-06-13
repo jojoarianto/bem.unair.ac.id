@@ -3,6 +3,12 @@
 return [
 
 	/*
+	custom application config
+	*/
+	'url_basic'				=> 'bem.unair.ac.id',
+	'generator_name_app'	=> 'BEM UNAIR Generator Link',
+
+	/*
 	|--------------------------------------------------------------------------
 	| Application Debug Mode
 	|--------------------------------------------------------------------------

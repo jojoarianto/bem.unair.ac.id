@@ -1,8 +1,8 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use App\Http\Requests\StoreGeneratorPostRequest as StoreGeneratorPostRequest;
 use App\Http\Controllers\Controller;
+use App\Models\Generator;
 
 class GeneratorController extends Controller {
 
@@ -32,9 +32,10 @@ class GeneratorController extends Controller {
 	 * @return Response
 	 */
 	public function store(StoreGeneratorPostRequest $request)
-	{
-		// return 'tes';
-		return $request->all();
+	{		
+		$generator = Generator::create($request->all());
+		$url_to = config('app.url_basic').'/'.$generator['url_you_want'];
+		return redirect()->back()->withSuccess( 'Url <strong><a target="_blank" href="http://'.$url_to.'">'.$url_to.'</a></strong> created' );
 	}
 
 	/**
@@ -45,8 +46,10 @@ class GeneratorController extends Controller {
 	 */
 	public function show($id)
 	{
-		if ($id == 'tes') {
-			return 'tes';
+		if ($id != '') {
+			$generator = Generator::where('url_you_want', $id)->first();
+			if ($generator) { return redirect($generator['url']); }
+			return 'page not found';
 		} else {
 			return 'page not found';
 		}

@@ -24,7 +24,7 @@ class StoreGeneratorPostRequest extends Request {
 		return [
 			'email'			=> 'required|email',
 			'url'			=> 'required|url',
-			'url_you_want'	=> 'required|alpha_dash'
+			'url_you_want'	=> 'required|alpha_dash|unique:generators'
 		];
 	}
 
